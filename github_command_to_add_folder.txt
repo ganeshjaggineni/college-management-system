@@ -1,0 +1,12 @@
+after downlaodign gitbash windows version
+->git config --global user.name "GANESH JAGGINENI"
+->git config --global user.email "ganeshjaggineni@gmail.com"
+->git clone newly created repository link with http
+
+here a folder is created in c:/users/ganes/folder
+paste all the files & folders into this created folder
+->cd folder name
+->git status
+->git add .
+->git commit -m "some random name which is displayed at github description
+->git push origin main
