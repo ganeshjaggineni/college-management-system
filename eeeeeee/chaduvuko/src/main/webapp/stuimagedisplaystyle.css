@@ -1,0 +1,76 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+	border:3px double black;
+}
+.dishead h1{
+    color:blue;
+    text-align: center;
+    margin:3px;
+    padding:3px;
+    border: 2px solid;
+}
+.imgdisp{
+    background-color: aquamarine;
+    width:350px;
+    height: 200px;
+    position: relative;
+    left:35%;
+    margin:20px;
+    border:3px outset;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.imgdisp h3{
+    font-size: 22px;
+    margin-top:13px;
+    margin-left:10px;
+    margin-bottom:13px;
+}
+.imgdisp input[type="text"]
+{
+    color:black;
+    font-size:18px;
+    font-weight: 600;
+    line-height:25px;
+    margin:0 0 13px 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+.imgdisp input[type="submit"]
+{
+    background: repeating-linear-gradient(rgb(58, 238, 58),pink,rgb(75, 236, 75));
+    font-size: 20px;
+    font-weight: 900;
+    margin:13px 0 10px 90px;
+    border:4px groove;
+    border-radius: 10px;
+    padding:5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+.imgdisp input[type="submit"]:active{
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+.dbimgdisp{
+    background-color: white;
+    position:absolute;
+    left:33%;
+    margin-top:30px;
+
+}
+.dbimgdisp {
+    border:20px outset rgb(18, 241, 241);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+
+}
+.dbimgdisp th{
+    font-size:28px;
+    padding:5px;
+}

@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*" %> 
+<%@ page import="java.io.*" %> 
+<%!
+		String url="jdbc:mysql://localhost:3306/college";
+		String mysqluser="root";
+		String mysqlpwd="GANESHgani123#@mysql";
+		
+	%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Studenet Data Updation</title>
+<link rel="stylesheet" href="updatestudatastyle.css">
+</head>
+<body>
+	<div class="updatecontainer">
+		<div class="updatebox">
+			<div class="updatehead">
+				<h2>Update Student Data</h2>
+			</div>
+			<div class="box">
+			<form method="get" action="UpdateStudentData">
+                <label>Enter Student Registration No:</label>
+                <input type="text" name="uid" value="21761A0590" placeholder="Student Registration No :">
+                <div class="butt">
+                <input type="submit" value="Get Data" onclick="update()">
+            </div>
+            </form>
+			</div>
+		</div>
+	</div>
+	
+	<%=request.getParameter("uid") %>
+</body>
+<script>
+function update()
+{
+	window.location.href="UpdateStudentData.jsp";
+	}
+</script>
+
+</html>

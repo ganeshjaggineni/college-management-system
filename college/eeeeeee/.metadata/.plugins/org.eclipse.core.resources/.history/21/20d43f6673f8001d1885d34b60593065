@@ -1,0 +1,83 @@
+package org;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
+//@WebServlet("/LoginAllServ")
+public class LoginAllServ extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+  
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter printer=response.getWriter();
+		response.setContentType("text/html");
+		
+		String url="jdbc:mysql://localhost:3306/college";
+		String mysqluser="root";
+		String mysqlpwd="GANESHgani123#@mysql";
+		
+		//getting login details from the form
+		String username=request.getParameter("stud");
+		String userpwd=request.getParameter("stu");
+		
+		printer.println(username);
+		printer.println(userpwd);
+		
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con=DriverManager.getConnection(url,mysqluser,mysqlpwd);
+			printer.println("succesfully connected");
+	
+			
+			
+            PreparedStatement ps = con.prepareStatement("select * from STULOGIN where StuRegNo=? and StuPwd=?");
+
+            ps.setString(1, username);
+            ps.setString(1, userpwd);
+            ResultSet rs =ps.executeQuery();
+            if(rs.next())
+            {
+            	printer.println(rs.getString(1));
+            }
+			
+			
+////			String stuinsloginquery="INSERT INto DUMMYLOGIN VALUES(?,?)";
+////			PreparedStatement ps=con.prepareStatement(stuinsloginquery);
+////			int s=ps.executeUpdate();
+////			ps.setString(1,studregno);
+////			ps.setString(2, studpwd);
+////			String que="INSERT INTO DUMMYLOGIN values(''+"studregno"+'',"studpwd")";
+////			Statement st=con.createStatement();
+////			int s=st.executeUpdate(que);
+//			String query="INSERT INTO STULOGIN values(?,?)";
+//			PreparedStatement psk=con.prepareStatement(query);
+//			
+//			psk.setString(1, studregno);
+//			psk.setString(2, studpwd);
+//			int ro=psk.executeUpdate();
+////			printer.println("<h3>login success</h3>");
+//		
+		}		
+		
+		catch(Exception e)
+		{
+			
+			
+			
+		}
+	}
+
+}

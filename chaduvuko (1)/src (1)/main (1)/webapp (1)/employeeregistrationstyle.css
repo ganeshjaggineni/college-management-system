@@ -1,0 +1,321 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(130, 106, 251);
+}
+.container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 30px;
+  color:rgb(244, 18, 207);
+  font-weight: 500;
+  text-align: center;
+  border:3px solid;
+  border-style: outset;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.container .form {
+  margin-top: 30px;
+}
+.infhead{
+  background-color: rgb(180, 180, 220);
+  width:345px;
+  padding:3px;
+  margin-left:92px;
+  border:3px inset;
+  margin-top: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+.infhead h2{
+  color:black;
+  text-align: center;
+  justify-content: center;
+
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+
+}
+.input-box label {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  top:-15px;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+
+}
+.gender-box h3{
+  font-size: 20px;
+  display: inline-block;
+  position:absolute;
+  padding-top: 15px;
+}
+.select-box{
+  border:2px solid;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+input[type="text"], input[type="password"],input[type="number"],input[type="date"],input[type="select"]{
+  border: 2px solid;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+input[type=radio] {
+  accent-color: green;
+}
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  margin-left: 100px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: rgb(246, 12, 238);
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+
+.servmsg h2{
+	color:rgb(96, 254, 5);
+	position:absolute;
+	top:2px;
+	right:0px;
+	padding:10px;
+	font-size:30px;
+	animation: anim 10s ;
+	animation-fill-mode: forwards;
+	border:3px solid;
+	border-style:outset;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+	z-index:1000;
+}
+.servmsgerr h2{
+	position:absolute;
+	top:2px;
+	right:0px;
+	padding:30px;
+	font-size:20px;
+	animation: msgerr 10s ;
+	animation-fill-mode: forwards;
+	border:3px solid;
+	border-style:outset;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+	z-index:1000;
+}
+.dbmsg h2{
+	position:absolute;
+	top:2px;
+	right:0px;
+	padding:30px;
+	font-size:20px;
+	animation: msgerrdb 10s ;
+	animation-fill-mode: forwards;
+	border:3px solid;
+	border-style:outset;
+	box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+	z-index:1000;
+}
+
+@keyframes anim{
+		
+		50%{
+		opacity:0.5;
+		}
+		75%{
+		opacity:0.3;
+		}
+	100%{
+	opacity:0;
+	}
+	
+	
+}
+
+@keyframes msgerr{
+	0%{
+	opacity:1;
+	}
+	10%{
+	opacity:1;
+	}
+	20%{
+	opacity:0;
+	}
+	30%{
+	opacity:1;
+	}
+	40%{
+	opacity:0;
+	}
+	50%{
+	opacity:1;
+	}
+	60%{
+	opacity:0;
+	}
+	70%{
+	opacity:1;
+	}
+	80%{
+	opacity:0;
+	}
+	90%{
+	opacity:1;
+	}
+	100%{
+	opacity:0;
+	}
+}
+
+@keyframes msgerrdb{
+	0%{
+	opacity:0;
+	}
+	10%{
+	opacity:0;
+	}
+	20%{
+	opacity:1;
+	}
+	30%{
+	opacity:0;
+	}
+	40%{
+	opacity:1;
+	}
+	50%{
+	opacity:0;
+	}
+	60%{
+	opacity:1;
+	}
+	70%{
+	opacity:0;
+	}
+	80%{
+	opacity:1;
+	}
+	90%{
+	opacity:0;
+	}
+	100%{
+	opacity:0;
+	}
+}

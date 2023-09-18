@@ -1,0 +1,73 @@
+package org;
+import java.io.*;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.*;
+
+
+public class LoginServ extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter printer=response.getWriter();
+		response.setContentType("text/html");
+		
+		String url="jdbc:mysql://localhost:3306/dummy";
+		String mysqluser="root";
+		String mysqlpwd="GANESHgani123#@mysql";
+		String username=request.getParameter("name");
+		String userpassword=request.getParameter("password");		
+		int flag=0;
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con=DriverManager.getConnection(url,mysqluser,mysqlpwd);
+			printer.println("succesfully connected");
+			printer.println("user"+username+"pass"+userpassword);
+			printer.println(con);
+			Statement st=con.createStatement();
+			ResultSet rs=st.executeQuery("select * from DUMMYLOGIN");
+			
+			while(rs.next())
+			{
+				String un=rs.getString(1);
+				String pwd=rs.getString(1);
+				
+				if(un.equals(username)&&pwd.equals(userpassword))
+				{
+					flag=1;
+					break;
+				}
+			}
+			
+			if(flag==0)
+			{
+				printer.println("</br>");
+				printer.println("<h2>User valid </h2>");
+				printer.println("</br>");
+				printer.println("YOur user name is "+"<h3>"+username+"</h3>");
+				printer.println("</br>");
+				printer.println("YOur password is "+"<h4>"+username+"</h4>");
+			}
+			else
+			{
+				printer.println("</br>");
+				printer.println("<h3> invalid user</h3>");
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+
+	
+
+}

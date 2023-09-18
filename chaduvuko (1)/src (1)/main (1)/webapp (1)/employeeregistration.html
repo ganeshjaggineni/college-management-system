@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="employeeregistrationstyle.css" />
+  </head>
+  <body>
+    <section class="container">
+      <!-- <header>Employee Registration Form</header> -->
+      <div class="waviy">
+        <span style="--i:1">R</span>
+        <span style="--i:2">E</span>
+        <span style="--i:3">G</span>
+        <span style="--i:4">I</span>
+        <span style="--i:5">S</span>
+        <span style="--i:6">T</span>
+        <span style="--i:7">R</span>
+        <span style="--i:8">A</span>
+        <span style="--i:9">T</span>
+        <span style="--i:10">I</span>
+        <span style="--i:11">O</span>
+        <span style="--i:12">N</span>
+
+       </div>
+      <form action="EmpRegServ" class="form" method="post">
+        <div class="infhead">
+            <h2>Employee Instution Details</h2>
+        </div>
+        <div class="input-box">
+            <img src="codeimages/empid.gif" width="50px" height="50px">
+            <label>Enter Employee Id :</label>
+            <input type="text" placeholder="Enter Employee Id" required  value="T867" name="empid"/>
+          </div>
+
+          <div class="input-box">
+            <img src="codeimages/empname.gif" width="50px" height="50px">
+          <label>Enter Employee Password</label>
+          <input type="password" placeholder="Enter password"  required value="T867" name="emppwd"/>
+        </div>
+
+        <div class="input-box">
+            <img src="codeimages/empname.gif" width="50px" height="50px">
+          <label>Enter Employee Name</label>
+          <input type="text" placeholder="Enter full name" required value="devi priya" name="empname" />
+        </div>
+
+        <div class="input-box">
+            <img src="codeimages/empdept.gif" width="50px" height="50px">
+            <label>Enter Department :</label>
+          <div class="select-box">
+            <select name="empdept">
+              <option hidden>Department</option>
+              <option selected>CSE</option>
+              <option>CSM</option>
+              <option>ECE</option>
+              <option>EEE</option>
+              <option>MECH</option>
+              <option>CYBER SECURITY</option>
+              <option>FED</option>
+              <option>EXAM CELL</option>
+              <option>LIBRARY</option>
+            </select>
+          </div>
+          </div>
+
+          <div class="input-box">
+            <img src="codeimages/empdesignation.gif" width="50px" height="50px">
+            <label>Enter Designation :</label>
+            <input type="text" placeholder="Enter Designation" required  value="Associate Professor" name="empdesig"/>
+          </div>
+
+
+
+
+          <div class="column">
+            <div class="input-box">
+                <img src="codeimages/empmobile.gif" width="50px" height="50px">
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter phone number" required value="7730973355" name="empmobile" />
+              </div>
+            <div class="input-box">
+                <img src="codeimages/empjoindate.gif" width="50px" height="50px">
+              <label>Enter Joining Date</label>
+              <input type="date" placeholder="Enter Joining date" required value="2021-08-16" name="empdoj"/>
+            </div>
+          </div>
+
+
+          <div class="input-box">
+            <img src="codeimages/empemail.gif" width="50px" height="50px">
+            <label>Email Address</label>
+            <input type="text" placeholder="Enter email address" required value="k.devipriya20@gmail.com" name="empemail"/>
+          </div>
+
+          <div class="input-box">
+            <img src="codeimages/empaadhar.png" width="50px" height="50px">
+            <label>Aadhar Number</label>
+            <input type="number" placeholder="Enter phone number" required value="409708455566" name="empaadhar" />
+          </div>
+
+          <div class="infhead">
+            <h2>Employee Instution Details</h2>
+        </div>
+          <div class="input-box">
+            <img src="codeimages/empdob.gif" width="50px" height="50px">
+            <label>Enter Birth Date</label>
+            <input type="date" placeholder="Enter dob" required value="2021-01-11" name="empdob"/>
+          </div>
+
+        <div class="gender-box">
+
+          <img src="codeimages/empgender.gif" width="50px" height="50px"> <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="empgender" checked value="male"/>
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="empgender" checked value="female" />
+              <label for="check-female">Female</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box">
+            <img src="codeimages/empfather.gif" width="50px" height="50px">
+            <label>Enter Father Name</label>
+            <input type="text" placeholder="Enter Father Name" required value="nooka raju" name="empfather"/>
+          </div>
+
+          <div class="input-box">
+            <img src="codeimages/emptempaddress.gif" width="50px" height="50px">
+            <label>Enter Temporary Address :</label>
+            <input type="text" placeholder="Enter Temporary Address" required value="mylavaram" name="emptempaddress"/>
+          </div>
+
+          <div class="input-box">
+            <img src="codeimages/emppermaddress.gif" width="50px" height="50px">
+            <label>Enter Permenant Address :</label>
+            <input type="text" placeholder="Enter Permenant Address" required value="godavari" name="emppermaddress"/>
+          </div>
+
+        <button>Submit</button>
+      </form>
+    </section>
+  </body>
+</html>

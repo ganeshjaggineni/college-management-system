@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Tue May 23 15:41:52 IST 2023
+org.eclipse.jst.jee.server\:gad=D\:\\softwares\\apache\\Apache Software Foundation\\Tomcat10\\wtpwebapps\\gad
+org.eclipse.jst.jee.server\:projdyn=D\:\\softwares\\apache\\Apache Software Foundation\\Tomcat10\\wtpwebapps\\projdyn
+org.eclipse.jst.jee.server\:chaduvuko=D\:\\softwares\\apache\\Apache Software Foundation\\Tomcat10\\wtpwebapps\\chaduvuko

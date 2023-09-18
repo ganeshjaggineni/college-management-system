@@ -1,0 +1,43 @@
+package org;
+import java.io.*;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+//import java.sql.DriverManager;
+//import java.sql.*;
+
+
+public class LoginServ extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		PrintWriter printer=response.getWriter();
+		response.setContentType("text/html");
+		
+		String url="jdbc:mysql//localhost:3306/dummy";
+		String mysqluser="root";
+		String mysqlpwd="GANEShgani123#@mysql";
+		String username=request.getParameter("name");
+		String userpassword=request.getParameter("password");		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+//			Connection con=DriverManager.getConnection(url,mysqluser,mysqlpwd);
+			printer.println("succesfully connected");
+			printer.println("user"+username+"pass"+userpassword);
+//			printer.println(con);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+
+	
+
+}

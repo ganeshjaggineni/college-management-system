@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+}
+.updatecontainer h1{
+    color:red;
+    font-size:45px;
+    margin-top:65px;
+}
+.updatehead h2{
+    font-size:20px;
+    border:2px groove gold;
+    margin-left:130px;
+    padding:3px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.updatebox{
+    width:30%;
+    background:linear-gradient(blue,rgb(41, 195, 246),blue,rgb(41,195,246));
+    height:250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left:12px;
+    margin-top:3%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    }
+    .box label{
+        font-size:30px;
+        position: relative;
+        top:10px;
+        margin-left: 10px;
+    }
+    .box input[type="text"]{
+        border:15px outset;
+        position: relative;
+        top:15px;
+        margin-left:15px;
+        margin-top:15px;
+        width:300px;
+        line-height: 30px;
+        font-size:25px;
+        font-weight: 900;
+        color:rgb(0, 0, 0);
+
+    }
+
+    .box input[type="submit"]{
+        background-color: rgb(117, 240, 117);
+        font-size:28px;
+        position: relative;
+        left: 40%;
+        border:5px groove;
+        border-radius: 8px;
+        top:25px;
+        padding:7px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    }
